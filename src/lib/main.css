@@ -21,7 +21,14 @@
     border-radius: 20px;
     border: 1px solid #1f1943;
   }
-
+  input,
+  textarea,
+  button,
+  select,
+  div
+  a {
+      -webkit-tap-highlight-color: transparent;
+  }
 body{
     margin: 0;
     padding: 0;
