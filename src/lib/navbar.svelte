@@ -95,8 +95,7 @@ transition: all .1s;
     /* position: fixed; */
     width:100%;
     /* padding: 0 3em; */
-    min-height: 4em;
-    height: 8vh;
+    height: 5em;
     z-index: 10 !important; 
     justify-content: space-between;
     align-items: center;
@@ -166,9 +165,9 @@ color: white !important;
   width: 40vw;
   right: 0;
   top: 0;
-  padding: 5% 0;
+  padding-top: 2em;
   border-radius: 1em 0 1em 1em;
-  margin-top: 8vh;
+  margin-top: 5rem;
   position: absolute;
   background-color: #5863F8;
   transition: all .5s;
@@ -185,7 +184,7 @@ color: white !important;
   text-decoration: none;
   width: 100%;
   font-size: 1.6rem;
-  padding: 1em 0;
+  padding: .6em 0;
   font-weight: 350;
   text-align: center;
 
@@ -228,7 +227,7 @@ hr.rounded {
 
 }
 .link{
-  line-height: 8vh !important;
+  line-height: 5rem !important;
 
   
 }
@@ -250,7 +249,6 @@ hr.rounded {
   right: 0;
   padding: 5% 0;
   border-radius: 0em 0em 1em 1em;
-  margin-top: 8vh;
   position: absolute;
   background-color: #5863F8;
   transition: all .5s;
