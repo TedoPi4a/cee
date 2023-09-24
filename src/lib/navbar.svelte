@@ -1,116 +1,151 @@
 <script>
-  let isMenuOpen = false;
+  import Ham from "./ham.svelte";
+let isOpen = false;
+let isOpen2 = false;
+let isOpen3 = false;
 
-  function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
+let navOpen = false
+  function heh() {
+    isOpen = true;
+  }
+  function heh2() {
+    isOpen2 = true;
+  }
+  function heh3() {
+    isOpen3 = true;
   }
 </script>
-
+<main>
 <div class="navbar">
   <div class="logo"></div>
-  <div class="hamburger-menu" class:active={isMenuOpen} on:click={toggleMenu}>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="links" class:open={isMenuOpen}>
+  <div class="ham" on:click={() => navOpen = !navOpen}><Ham/></div>
+  <div class="links">
     <a class="link" href="#">Начало</a>
-    <div class="dropdown">
-      <button class="dropbtn"><a href="#">Кои сме ние? ▾</a></button>
-      <div class="dropdown-content">
-        <a href="#">Камара</a>
-        <a href="#">Ръководство</a>
-        <a href="#">Членове</a>
+
+      <a class="link" on:mouseover={heh} on:mouseleave={() => isOpen = !isOpen} href="#">Кои сме ние?  <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+        <path class="notactivesym" class:activesym = {isOpen} d="M4 17L25 39L46 17Z"  />
+      </svg> 
+      <div class:dropdown-content1={isOpen} class="dropdown-content2" style="position: absolute; display: flex;">
+          <a href="#">Камара</a>
+          <a href="#">Ръководство</a>
+          <a href="#">Членове</a>
       </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn"><a href="#">Документи ▾</a></button>
-      <div class="dropdown-content">
-        <a href="#">Документи на ЕС</a>
-        <a href="#">Ръководство</a>
-        <a href="#">Членове</a>
+    </a>
+      <a class="link" on:mouseover={heh2} on:mouseleave={() => isOpen2 = !isOpen2} href="#">Документи <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+        <path class="notactivesym" class:activesym = {isOpen2} d="M4 17L25 39L46 17Z"  />
+      </svg> 
+      <div class:dropdown-content1={isOpen2} class="dropdown-content2" style="position: absolute; display: flex;">
+          <a href="#">Документи на ЕС</a>
+          <a href="#">Документи на РБ</a>
+          <a href="#">Документи на камарата</a>
       </div>
-    </div>
-    <a class="link" href="#">Контакти</a>
-    <a class="link" href="#">Новини и събития</a>
+    </a>
+      <a class="link" on:mouseover={heh3} on:mouseleave={() => isOpen3 = !isOpen3} href="#">Новини и събития <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+        <path class="notactivesym" class:activesym = {isOpen3} d="M4 17L25 39L46 17Z"  />
+      </svg> 
+      <div class:dropdown-content1={isOpen3} class="dropdown-content2" style="position: absolute; display: flex;">
+          <a href="#">Новини</a>
+          <a href="#">Предстоящи събития</a>
+          <a href="#">Информация за събития</a>
+      </div>
+    </a>
     <a class="link" href="#">Обяви</a>
+    <a class="link" href="#">Полезни връзки</a>
+    <a class="link" href="#">Контакти</a>
   </div>
 </div>
-
+<div class="sidebar" class:active = {navOpen}>
+  <a href="#">Начало</a>
+  <a href="#">Камара</a>
+  <a href="#">Ръководство</a>
+  <a href="#">Членове</a>
+  <a href="#">Документи на ЕС</a>
+  <a href="#">Документи на РБ</a>
+  <a href="#">Документи на камарата</a>
+  <a href="#">Новини</a>
+  <a href="#">Предстоящи събития</a>
+  <a href="#">Информация за събития</a>
+  <a  href="#">Обяви</a>
+  <a  href="#">Полезни връзки</a>
+  <a href="#">Контакти</a>
+</div>
+</main>
 <style>
+
+  .activesym{
+fill: #1A936F !important;
+transform: scale(100%) !important;
+transition: all .1s;
+}
+
+  .notactivesym{
+fill: #EDF7F6;
+transform: scale(95%);
+transition: all .1s;
+
+}
+
     .navbar {
     background-color: #1e1b44;
     display: flex;
-    padding: 0 1em;
-    height: 10vh;
-    z-index: 99999;
+    position: fixed;
+    width:100%;
+    /* padding: 0 3em; */
+    min-height: 4em;
+    height: 8vh;
+    z-index: 10 !important; 
     justify-content: space-between;
     align-items: center;
 }
-        .dropdown {
-  position: relative;
-  display: inline-block;
-          padding-left: 1em;
-}
-button{
-  all: unset;
 
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
+.dropdown-content2{
+  flex-direction: column;
+  top: 1;
+  z-index: 1;
+  transform: translateY(-1em);
   background-color: #230846;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  margin: auto;
-  padding: 0;
-  width: 100%;
+  line-height: 3em;
   min-width: fit-content;
   height: fit-content;
-  border-radius:0 0 .4em .4em;
+  border-radius:0 0 .5em .5em;
   font-weight: 300;
-
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+  margin-left: -.3em;
+  display: none;
+transition: all .2s;}
+.dropdown-content1{
+  opacity: 1;
+  transition: all .2s;
+pointer-events: all;
+transform: none;
+display: block;
 }
 
-.dropdown-content a {
-  color: black;
-  font-size: 1.2em !important;
 
-  padding: .8em 1em !important;
+
+.dropdown-content2 :last-child{
+  border-radius:0 0 .5em .5em;
+
+}
+.dropdown-content2 a {
+  color: black;
+
+  font-size: .8em !important;
+  padding: 0 1em;
   text-decoration: none;
   display: block;
-  font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
-.dropdown-content a:hover {background-color: #000000;
+.dropdown-content2 a:hover {
+  background-color: #1A936F;
 color: white !important;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
-.dropdown:hover .dropbtn {
-}
-.dropbtn {
-  cursor: pointer;
-  color: #EDF7F6;
-    text-decoration: none;
-    padding-left: 1rem;
-    font-size: 1.45rem;
-    font-weight: 300;
-    background-color: inherit;
-    border: none;
-    height: 100%;
-}
-.dropbtn :hover{
-  color: #444444;
-}
-  .dropdown{
-    height: 100%;
-  }
 .navbar a {
     color: #EDF7F6;
     text-decoration: none;
@@ -119,14 +154,51 @@ color: white !important;
 }
 
 .navbar a:hover {
-  color: #444444  
+  color: #1A936F  
 }
 
+.sidebar {
+  z-index: 1;
+  width: 40vw;
+  right: 0;
+  top: 0;
+  padding: 5% 0;
+  border-radius: 1em 0 1em 1em;
+  margin-top: 8vh;
+  position: absolute;
+  background-color: #5863F8;
+  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 0.75;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 
-/* Optional: Style the logo */
+}
+.sidebar a{
+  color: #EDF7F6;
+  text-decoration: none;
+  width: 100%;
+  font-size: 1.4em;
+  padding: 1em 0;
+  text-align: center;
+}
+.sidebar a:hover{
+  background-color: rgb(26, 21, 56);
+}
+.active {
+  right: 0; /* Slide the sidebar into view when active */
+  pointer-events: all;
+  transition: all .5s;
+  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+
 .navbar .logo {
     background-image: url("/logo_cee.png") ;
-    
+    margin-left: 2vw;
     width: 12em;
     height: 100%;
     background-position: center;
@@ -135,92 +207,78 @@ color: white !important;
 .links{
   display: flex;
   height: 100%;
+  margin-right: 2vw;
   align-items: center ;
   list-style-type: none;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2em;
+
 }
 .link{
-  padding-left: 1em;
+  line-height: 8vh !important;
+
   
 }
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Added transition */
-  }
-
-  .hamburger-menu.active {
-    transform: rotate(90deg); /* Rotate the icon when the menu is open */
-  }
-
-  .hamburger-menu div {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 4px 0;
-    transition: background-color 0.3s ease; /* Added transition */
-  }
-
-  .hamburger-menu.active div {
-    background-color: #1e1b44; /* Change color of icon bars when the menu is open */
-  }
 
   /* Media query for responsive design */
-  @media screen and (max-width: 768px) {
-    /* Hide the logo on small screens */
-    .navbar .logo {
+  @media screen and (min-width: 1450px) {
+    .ham{
       display: none;
+      pointer-events: none;
+      opacity: 0;
+      z-index: -1;
     }
+    
+  }
+  @media screen and (max-width: 1000px) {
+    .sidebar {
+  z-index: 1;
+  width: 100%;
+  right: 0;
+  padding: 5% 0;
+  border-radius: 0em 0em 1em 1em;
+  margin-top: 8vh;
+  position: absolute;
+  background-color: #5863F8;
+  transition: all .5s;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 0.85;
+  clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
+}
+.sidebar a{
+  color: #EDF7F6;
+  text-decoration: none;
+  width: 100%;
+  font-size: 1.4em;
+  padding: 1em 0;
+  text-align: center;
+}
+.sidebar a:hover{
+  background-color: rgb(26, 21, 56);
+}
+.active {
+  right: 0; /* Slide the sidebar into view when active */
+  pointer-events: all;
+  transition: all .5s;
+  opacity: 1;
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 
-    /* Show the hamburger menu icon */
-    .hamburger-menu {
-      display: flex;
-    }
+}
+}
+
+  @media screen and (max-width: 1450px) {
 
     /* Hide the links by default */
     .links {
       display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px; /* Adjust as needed to avoid overlapping other content */
-      right: 0;
-      background-color: #1e1b44;
-      width: 100%;
-      transition: transform 0.3s ease, opacity 0.3s ease; /* Added transitions */
-      transform: translateY(-100%); /* Hide the menu off-screen initially */
+      pointer-events: none;
       opacity: 0;
     }
 
-    .links.open {
-      display: flex;
-      transform: translateY(0); /* Slide in from the top */
-      opacity: 1;
-    }
-
-    /* Style the dropdown content */
-    .dropdown-content {
-      background-color: #1e1b44;
-      border: none;
-      padding: 1rem;
-      box-shadow: none;
-    }
-
-    .dropdown-content a {
-      color: white;
-      font-size: 1.2em;
-      padding: 0.5rem 0;
-      text-decoration: none;
-      display: block;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      transition: color 0.3s ease; /* Added transition */
-    }
-
-    .dropdown-content a:hover {
-      color: #444444;
-    }
   }
 
  
