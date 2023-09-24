@@ -56,18 +56,22 @@ let navOpen = false
 </div>
 <div class="sidebar" class:active = {navOpen}>
   <a href="#">Начало</a>
+  <hr class="rounded">
   <a href="#">Камара</a>
+  <hr class="rounded">
   <a href="#">Ръководство</a>
-  <a href="#">Членове</a>
-  <a href="#">Документи на ЕС</a>
-  <a href="#">Документи на РБ</a>
-  <a href="#">Документи на камарата</a>
-  <a href="#">Новини</a>
-  <a href="#">Предстоящи събития</a>
-  <a href="#">Информация за събития</a>
-  <a  href="#">Обяви</a>
-  <a  href="#">Полезни връзки</a>
-  <a href="#">Контакти</a>
+  <hr class="rounded">
+  <a href="#">Членове</a>  <hr class="rounded">
+  <a href="#">Документи на ЕС</a>  <hr class="rounded">
+  <a href="#">Документи на РБ</a>  <hr class="rounded">
+  <a href="#">Документи на камарата</a>  <hr class="rounded">
+  <a href="#">Новини</a>  <hr class="rounded">
+  <a href="#">Предстоящи събития</a>  <hr class="rounded">
+  <a href="#">Информация за събития</a>  <hr class="rounded">
+  <a  href="#">Обяви</a>  <hr class="rounded">
+  <a  href="#">Полезни връзки</a>  <hr class="rounded">
+  <a href="#">Контакти</a>  <hr class="rounded">
+
 </div>
 </main>
 <style>
@@ -88,7 +92,7 @@ transition: all .1s;
     .navbar {
     background-color: #1e1b44;
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     width:100%;
     /* padding: 0 3em; */
     min-height: 4em;
@@ -180,12 +184,20 @@ color: white !important;
   color: #EDF7F6;
   text-decoration: none;
   width: 100%;
-  font-size: 1.4em;
+  font-size: 1.6rem;
   padding: 1em 0;
+  font-weight: 350;
   text-align: center;
+
+
+}
+hr.rounded {
+  border-radius: 12px;
+  opacity: 0.15;
+  width: 80%;
 }
 .sidebar a:hover{
-  background-color: rgb(26, 21, 56);
+  background-color: rgb(36, 29, 77);
 }
 .active {
   right: 0; /* Slide the sidebar into view when active */
@@ -193,6 +205,7 @@ color: white !important;
   transition: all .5s;
   opacity: 1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  
 
 }
 
