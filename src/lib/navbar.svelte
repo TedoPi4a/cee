@@ -38,9 +38,9 @@ let navOpen = false
         <path class="notactivesym" class:activesym = {isOpen2} d="M4 17L25 39L46 17Z"  />
       </svg> 
       <div class:dropdown-content1={isOpen2} class="dropdown-content2" style="position: absolute; display: flex;">
-          <a href="/eu-documents">Документи на ЕС</a>
-          <a href="#">Документи на РБ</a>
-          <a href="#">Документи на камарата</a>
+          <a class:is-active2={$page.url.pathname === "/eu-documents"} href="/eu-documents">Документи на ЕС</a>
+          <a class:is-active2={$page.url.pathname === "/bulgarian-documents"} href="/bulgarian-documents">Документи на РБ</a>
+          <a class:is-active2={$page.url.pathname === "/cee-documents"} href="/cee-documents">Документи на камарата</a>
       </div>
     </a>
       <a class="link" on:mouseover={heh3} on:mouseleave={() => isOpen3 = !isOpen3} href="#">Новини и събития <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -66,10 +66,10 @@ let navOpen = false
     <hr class="rounded">
     <a class:is-active={$page.url.pathname === "/managment"} href="/managment">Ръководство</a>
     <hr class="rounded">
-    <a class:is-active={$page.url.pathname === "/members"} href="#">Членове</a>  <hr class="rounded">
-    <a href="/eu-documents">Документи на ЕС</a>  <hr class="rounded">
-    <a href="#">Документи на РБ</a>  <hr class="rounded">
-    <a href="#">Документи на камарата</a>  <hr class="rounded">
+    <a class:is-active={$page.url.pathname === "/members"} href="/members">Членове</a>  <hr class="rounded">
+    <a class:is-active={$page.url.pathname === "/eu-documents"} href="/eu-documents">Документи на ЕС</a>  <hr class="rounded">
+    <a class:is-active={$page.url.pathname === "/bulgarian-documents"} href="/bulgarian-documents">Документи на РБ</a>  <hr class="rounded">
+    <a class:is-active={$page.url.pathname === "/cee-documents"} href="/cee-documents">Документи на камарата</a>  <hr class="rounded">
     <a href="#">Новини</a>  <hr class="rounded">
     <a href="#">Предстоящи събития</a>  <hr class="rounded">
     <a href="#">Информация за събития</a>  <hr class="rounded">
