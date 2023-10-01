@@ -1,5 +1,7 @@
 <script>
   import Ham from "./ham.svelte";
+  import { page } from '$app/stores';
+
 let isOpen = false;
 let isOpen2 = false;
 let isOpen3 = false;
@@ -16,26 +18,27 @@ let navOpen = false
   }
 </script>
 <main>
-<div class="navbar">
-  <div class="logo"></div>
-  <div class="ham" on:click={() => navOpen = !navOpen}><Ham/></div>
-  <div class="links">
-    <a class="link" href="#">Начало</a>
+<div on:mouseleave={() => navOpen = false} class="navbar">
 
-      <a class="link" on:mouseover={heh} on:mouseleave={() => isOpen = !isOpen} href="#">Кои сме ние?  <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <div class="logo"></div>
+  <div class="ham" on:click={() => navOpen = !navOpen}><Ham isHam={navOpen} /></div>
+  <div class="links">
+    <a class:is-active2={$page.url.pathname === "/"} class="link" href="/">Начало</a>
+
+      <a class="link" on:mouseover={heh} on:mouseleave={() => isOpen = !isOpen} href="/info">Кои сме ние?  <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
         <path class="notactivesym" class:activesym = {isOpen} d="M4 17L25 39L46 17Z"  />
       </svg> 
-      <div class:dropdown-content1={isOpen} class="dropdown-content2" style="position: absolute; display: flex;">
-          <a href="#">Камара</a>
-          <a href="#">Ръководство</a>
-          <a href="#">Членове</a>
+      <div class:dropdown-content1={isOpen} class="dropdown-content2" style="position: absolute; display: flex;"> 
+          <a class:is-active2={$page.url.pathname === "/chamber"} href="/chamber">Камара</a>
+          <a class:is-active2={$page.url.pathname === "/managment"} href="/managment">Ръководство</a>
+          <a class:is-active2={$page.url.pathname === "/members"} href="/members">Членове</a>
       </div>
     </a>
       <a class="link" on:mouseover={heh2} on:mouseleave={() => isOpen2 = !isOpen2} href="#">Документи <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
         <path class="notactivesym" class:activesym = {isOpen2} d="M4 17L25 39L46 17Z"  />
       </svg> 
       <div class:dropdown-content1={isOpen2} class="dropdown-content2" style="position: absolute; display: flex;">
-          <a href="#">Документи на ЕС</a>
+          <a href="/eu-documents">Документи на ЕС</a>
           <a href="#">Документи на РБ</a>
           <a href="#">Документи на камарата</a>
       </div>
@@ -53,24 +56,28 @@ let navOpen = false
     <a class="link" href="#">Полезни връзки</a>
     <a class="link" href="#">Контакти</a>
   </div>
+  <div class="sidebar"  class:active = {navOpen} >
+    <div on:click={() => navOpen = false} class="sidebar-links">
+    <a class:is-active={$page.url.pathname === "/"} href="/">Начало</a>
+    <hr class="rounded">
+    <a href="/info">Кои сме ние? </a>
+    <hr class="rounded">
+    <a class:is-active={$page.url.pathname === "/chamber"} href="/chamber">Камара</a>
+    <hr class="rounded">
+    <a class:is-active={$page.url.pathname === "/managment"} href="/managment">Ръководство</a>
+    <hr class="rounded">
+    <a class:is-active={$page.url.pathname === "/members"} href="#">Членове</a>  <hr class="rounded">
+    <a href="/eu-documents">Документи на ЕС</a>  <hr class="rounded">
+    <a href="#">Документи на РБ</a>  <hr class="rounded">
+    <a href="#">Документи на камарата</a>  <hr class="rounded">
+    <a href="#">Новини</a>  <hr class="rounded">
+    <a href="#">Предстоящи събития</a>  <hr class="rounded">
+    <a href="#">Информация за събития</a>  <hr class="rounded">
+    <a  href="#">Обяви</a>  <hr class="rounded">
+    <a  href="#">Полезни връзки</a>  <hr class="rounded">
+    <a href="#">Контакти</a>  <hr class="rounded">
+  </div>
 </div>
-<div class="sidebar" class:active = {navOpen}>
-  <a href="#">Начало</a>
-  <hr class="rounded">
-  <a href="#">Камара</a>
-  <hr class="rounded">
-  <a href="#">Ръководство</a>
-  <hr class="rounded">
-  <a href="#">Членове</a>  <hr class="rounded">
-  <a href="#">Документи на ЕС</a>  <hr class="rounded">
-  <a href="#">Документи на РБ</a>  <hr class="rounded">
-  <a href="#">Документи на камарата</a>  <hr class="rounded">
-  <a href="#">Новини</a>  <hr class="rounded">
-  <a href="#">Предстоящи събития</a>  <hr class="rounded">
-  <a href="#">Информация за събития</a>  <hr class="rounded">
-  <a  href="#">Обяви</a>  <hr class="rounded">
-  <a  href="#">Полезни връзки</a>  <hr class="rounded">
-  <a href="#">Контакти</a>  <hr class="rounded">
 
 </div>
 </main>
@@ -88,10 +95,20 @@ transform: scale(95%);
 transition: all .1s;
 
 }
+.is-active{
+  background-color: #15112d !important;
+  font-weight: 400 !important;
 
+}
+.is-active2{
+  color: #1A936F !important;
+  font-weight:bolder  !important;
+  font-weight: 400 !important;
+}
     .navbar {
     background-color: #1e1b44;
     display: flex;
+    position: relative;
     /* position: fixed; */
     width:100%;
     /* padding: 0 3em; */
@@ -153,7 +170,7 @@ color: white !important;
     color: #EDF7F6;
     text-decoration: none;
     font-size: 1.45rem;
-    font-weight: 300 !important;
+    font-weight: 300;
 }
 
 .navbar a:hover {
@@ -165,20 +182,26 @@ color: white !important;
   width: 40vw;
   right: 0;
   top: 0;
-  padding-top: 2em;
-  border-radius: 1em 0 1em 1em;
+  height: calc(100vh - 5rem);
   margin-top: 5rem;
+  overflow-y: auto;
+  border-radius: 1em 0 1em 1em;
   position: absolute;
   background-color: #5863F8;
   transition: all .5s;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+
   opacity: 0.75;
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 
 }
+.sidebar-links{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .sidebar a{
   color: #EDF7F6;
   text-decoration: none;
@@ -194,9 +217,11 @@ hr.rounded {
   border-radius: 12px;
   opacity: 0.15;
   width: 80%;
+  margin: .2rem;
 }
 .sidebar a:hover{
   background-color: rgb(36, 29, 77);
+  color: #EDF7F6 !important;
 }
 .active {
   right: 0; /* Slide the sidebar into view when active */
@@ -223,7 +248,7 @@ hr.rounded {
   align-items: center ;
   list-style-type: none;
   justify-content: space-between;
-  gap: 2em;
+  gap: 2.4em;
 
 }
 .link{
@@ -244,19 +269,10 @@ hr.rounded {
   }
   @media screen and (max-width: 1000px) {
     .sidebar {
-  z-index: 1;
   width: 100%;
-  right: 0;
-  padding: 5% 0;
-  border-radius: 0em 0em 1em 1em;
-  position: absolute;
+
   background-color: #5863F8;
-  transition: all .5s;
-  display: flex;
-  overflow-y: auto;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+
   opacity: 0.85;
   clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
 }

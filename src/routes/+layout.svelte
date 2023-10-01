@@ -7,5 +7,6 @@
 
 <Navbar/>
 <slot/>
+<div style="bottom: 0;">
 <Footer/>
-
+</div>

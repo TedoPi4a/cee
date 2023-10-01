@@ -115,7 +115,7 @@
     max-width: 37em;
     margin-bottom: 0;
     font-weight: 400;
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.35rem);
     padding: 0 4vw;
 }
 .downimage{

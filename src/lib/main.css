@@ -37,7 +37,10 @@ body{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     /* background-color: #7284A8; */
-    background-color: #15112d;
+    /* background-color: #15112d; */
+    /* background-color: #3d47b1; */
+    /* background-color: #3d8989; */
+    background-color: #545886;
     color: #EDF7F6;
     z-index: 999;
 }
