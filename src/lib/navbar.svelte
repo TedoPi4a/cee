@@ -187,7 +187,7 @@ color: white !important;
   overflow-y: auto;
   border-radius: 1em 0 1em 1em;
   position: absolute;
-  background-color: #5863F8;
+  background-color: #4d59d7;
   transition: all .5s;
 
   opacity: 0.75;
