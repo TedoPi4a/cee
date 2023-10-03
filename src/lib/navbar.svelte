@@ -47,7 +47,7 @@ let navOpen = false
         <path class="notactivesym" class:activesym = {isOpen3} d="M4 17L25 39L46 17Z"  />
       </svg> 
       <div class:dropdown-content1={isOpen3} class="dropdown-content2" style="position: absolute; display: flex;">
-          <a href="#">Новини</a>
+          <a class:is-active2={$page.url.pathname === "/news"} href="/news">Новини</a>
           <a href="#">Предстоящи събития</a>
           <a href="#">Информация за събития</a>
       </div>
@@ -70,7 +70,7 @@ let navOpen = false
     <a class:is-active={$page.url.pathname === "/eu-documents"} href="/eu-documents">Документи на ЕС</a>  <hr class="rounded">
     <a class:is-active={$page.url.pathname === "/bulgarian-documents"} href="/bulgarian-documents">Документи на РБ</a>  <hr class="rounded">
     <a class:is-active={$page.url.pathname === "/cee-documents"} href="/cee-documents">Документи на камарата</a>  <hr class="rounded">
-    <a href="#">Новини</a>  <hr class="rounded">
+    <a class:is-active={$page.url.pathname === "/news"} href="/news">Новини</a>  <hr class="rounded">
     <a href="#">Предстоящи събития</a>  <hr class="rounded">
     <a href="#">Информация за събития</a>  <hr class="rounded">
     <a  href="#">Обяви</a>  <hr class="rounded">
@@ -97,7 +97,7 @@ transition: all .1s;
 }
 .is-active{
   background-color: #15112d !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 
 }
 .is-active2{
@@ -179,7 +179,7 @@ color: white !important;
 
 .sidebar {
   z-index: 1;
-  width: 40vw;
+  width: 30vw;
   right: 0;
   top: 0;
   height: calc(100vh - 5rem);
