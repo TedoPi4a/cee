@@ -32,7 +32,7 @@
 
 <style>
     .text{
-     width: 50em;
+     width: 55em;
      background-color: rgb(60, 60, 94);
         border-radius: 1em;
         padding: 1em 2em;

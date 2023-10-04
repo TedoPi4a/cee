@@ -17,7 +17,7 @@
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #108767;
+    background-color: #3d8989;
     border-radius: 20px;
     border: 1px solid #1f1943;
   }
@@ -41,7 +41,7 @@ body{
     /* background-color: #3d47b1; */
     /* background-color: #3d8989; */
     background-color: #545886;
-    color: #EDF7F6;
+    color: #ffffff;
     z-index: 999;
 }
 /* html {

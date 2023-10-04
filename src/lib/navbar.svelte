@@ -16,9 +16,15 @@ let navOpen = false
   function heh3() {
     isOpen3 = true;
   }
+  function idk(){
+    navOpen = false;
+    isOpen = false;
+    isOpen2 = false;
+    isOpen3 = false
+  }
 </script>
 <main>
-<div on:mouseleave={() => navOpen = false} class="navbar">
+<div on:mouseleave={idk} class="navbar">
 
   <div class="logo"></div>
   <div class="ham" on:click={() => navOpen = !navOpen}><Ham isHam={navOpen} /></div>
@@ -48,43 +54,75 @@ let navOpen = false
       </svg> 
       <div class:dropdown-content1={isOpen3} class="dropdown-content2" style="position: absolute; display: flex;">
           <a class:is-active2={$page.url.pathname === "/news"} href="/news">Новини</a>
-          <a href="#">Предстоящи събития</a>
-          <a href="#">Информация за събития</a>
+          <a class:is-active2={$page.url.pathname === "/upcoming-events"} href="/upcoming-events">Предстоящи събития</a>
+          <a class:is-active2={$page.url.pathname === "/events-information"} href="/events-information">Информация за събития</a>
       </div>
     </a>
-    <a class="link" href="#">Обяви</a>
-    <a class="link" href="#">Полезни връзки</a>
-    <a class="link" href="#">Контакти</a>
+    <a class:is-active2={$page.url.pathname === "/announcements"}   href="/announcements">Обяви</a>
+    <a class="link" class:is-active2={$page.url.pathname === "/useful-links"} href="/useful-links">Полезни връзки</a>
+    <a class="link" class:is-active2={$page.url.pathname === "/contacts"} href="/contacts">Контакти</a>
   </div>
   <div class="sidebar"  class:active = {navOpen} >
-    <div on:click={() => navOpen = false} class="sidebar-links">
-    <a class:is-active={$page.url.pathname === "/"} href="/">Начало</a>
+    <div class="sidebar-links">
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/"} href="/">Начало</a>
     <hr class="rounded">
-    <a href="/info">Кои сме ние? </a>
+    <a on:click={() => isOpen = !isOpen} class:is-active3={isOpen} href="#">Кои сме ние? <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+      <path class="notactivesym" class:activesym = {isOpen} d="M4 17L25 39L46 17Z"  />
+    </svg> </a>
+    {#if isOpen}
+    <a on:click={idk} href="/info">Информация </a>
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/chamber"} href="/chamber">Камара</a>
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/managment"} href="/managment">Ръководство</a>
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/members"} href="/members">Членове</a>  <hr class="rounded">
+    {:else}
     <hr class="rounded">
-    <a class:is-active={$page.url.pathname === "/chamber"} href="/chamber">Камара</a>
+    {/if}
+   
+    <a on:click={() => isOpen2 = !isOpen2} class:is-active3={isOpen2} href="#">Документи <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+      <path class="notactivesym" class:activesym = {isOpen2} d="M4 17L25 39L46 17Z"  />
+    </svg> </a>
+    {#if isOpen2}
+    <a on:click={idk} style="line-height: 1.4em" class:is-active3={$page.url.pathname === "/eu-documents"} href="/eu-documents">Документи на ЕС</a>  
+    <a on:click={idk} style="line-height: 1.4em" class:is-active3={$page.url.pathname === "/bulgarian-documents"} href="/bulgarian-documents">Документи на РБ</a>  
+    <a on:click={idk} style="line-height: 1.4em" class:is-active3={$page.url.pathname === "/cee-documents"} href="/cee-documents">Документи на камарата</a>  <hr class="rounded">
+    {:else}
     <hr class="rounded">
-    <a class:is-active={$page.url.pathname === "/managment"} href="/managment">Ръководство</a>
+    {/if}
+    <a on:click={() => isOpen3 = !isOpen3} class:is-active3={isOpen3} href="#">Новини и събития <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+      <path class="notactivesym" class:activesym = {isOpen3} d="M4 17L25 39L46 17Z"  />
+    </svg> </a>
+    {#if isOpen3}
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/news"} href="/news">Новини</a>  
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/upcoming-events"} href="/upcoming-events">Предстоящи събития</a> 
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/events-information"} href="/events-information">Информация за събития</a>  <hr class="rounded">
+    {:else}
     <hr class="rounded">
-    <a class:is-active={$page.url.pathname === "/members"} href="/members">Членове</a>  <hr class="rounded">
-    <a class:is-active={$page.url.pathname === "/eu-documents"} href="/eu-documents">Документи на ЕС</a>  <hr class="rounded">
-    <a class:is-active={$page.url.pathname === "/bulgarian-documents"} href="/bulgarian-documents">Документи на РБ</a>  <hr class="rounded">
-    <a class:is-active={$page.url.pathname === "/cee-documents"} href="/cee-documents">Документи на камарата</a>  <hr class="rounded">
-    <a class:is-active={$page.url.pathname === "/news"} href="/news">Новини</a>  <hr class="rounded">
-    <a href="#">Предстоящи събития</a>  <hr class="rounded">
-    <a href="#">Информация за събития</a>  <hr class="rounded">
-    <a  href="#">Обяви</a>  <hr class="rounded">
-    <a  href="#">Полезни връзки</a>  <hr class="rounded">
-    <a href="#">Контакти</a>  <hr class="rounded">
+    {/if}
+
+
+
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/announcements"} href="/announcements">Обяви</a>  <hr class="rounded">
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/useful-links"} href="/useful-links">Полезни връзки</a>  <hr class="rounded">
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/contacts"} href="/contacts">Контакти</a>  <hr class="rounded">
   </div>
 </div>
 
 </div>
 </main>
 <style>
-
+.dropdown-sidebar{
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+  position: relative;
+  width: 100%;
+}
+.dropdown-sidebar .active{
+  opacity: 1;
+  
+}
   .activesym{
-fill: #1A936F !important;
+fill: #3d8989 !important;
 transform: scale(100%) !important;
 transition: all .1s;
 }
@@ -96,15 +134,20 @@ transition: all .1s;
 
 }
 .is-active{
-  background-color: #15112d !important;
   font-weight: 300 !important;
 
 }
 .is-active2{
-  color: #1A936F !important;
+  color: #3d8989 !important;
   font-weight:bolder  !important;
   font-weight: 400 !important;
 }
+.is-active3{
+  font-weight: 400 !important;
+  background-color: rgb(53, 43, 110) !important;
+
+}
+
     .navbar {
     background-color: #1e1b44;
     display: flex;
@@ -123,7 +166,7 @@ transition: all .1s;
   top: 1;
   z-index: 1;
   transform: translateY(-1em);
-  background-color: #230846;
+  background-color: #1e1b44;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   line-height: 3em;
   min-width: fit-content;
@@ -194,6 +237,13 @@ color: white !important;
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 
 }
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #424242 !important;}
+
+  .sidebar::-webkit-scrollbar {
+    width: .5rem;
+    
+  }  
 .sidebar-links{
   display: flex;
   flex-direction: column;

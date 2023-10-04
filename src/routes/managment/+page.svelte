@@ -113,5 +113,13 @@ gap: 1.1em;
                 grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important; 
                 width: 80%;
             }}
+
+            @media screen and (max-width: 632px) {
+                .div1{
+                    min-width: 80%;
+
+                }
+            }
+
     </style>
     

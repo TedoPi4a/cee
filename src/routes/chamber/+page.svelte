@@ -1,4 +1,5 @@
-<section><h1 style="text-align: center; font-size: 3.5rem; margin-top: 1.2em">Камара</h1>
+<section><h1 style="text-align: center; font-size: clamp(2.6rem, 8vw, 4rem);margin-top: 5vh">Камара</h1>
+
 <main>
 <div class="info">
 <p>ОСНОВНИ ЦЕЛИ НА СДРУЖЕНИЕТО ТАКА, КАКТО СА ФОРМУЛИРАНИ В УСТАВА СА:</p>

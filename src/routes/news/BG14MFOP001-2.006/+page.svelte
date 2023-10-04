@@ -1,7 +1,7 @@
 <h1 style="text-align: center; font-size: clamp(2.6rem, 8vw, 4rem);margin-top: 5vh">Новини</h1>
 <div class="text">
     <h2 style="font-size: clamp(1.4em, 6vw, 2em) !important">BG16RFOP002-2.009 „Развитие на клъстери в България“</h2>
-    <h4 style="font-weight: 500; font-size: clamp(.9em, 4vw, 1em) !important">Крайният срок за подаване на проектни предложения пред Управляващия орган е 17:30 часа на 28.04.2017 г.</h4>
+    <h4 style="font-size: 1.05em; font-weight: 500">Крайният срок за подаване на проектни предложения пред Управляващия орган е 17:30 часа на 28.04.2017 г.</h4>
     <p>Основната цел на процедурата е предоставяне на подкрепа за коопериране и създаване на клъстери в България, развитие на капацитета и интернационализацията на вече създадени такива като фактор за повишаване на конкурентоспособността и бизнес развитието.<br>
     
     По-долу ще намерите всички необходими документи за процедурата и за подготовка на документите за кандидатстване.</p>
@@ -37,12 +37,26 @@
             <li><a href="/documents/cluster_development/application_f.docx" target="_blank" rel="noopener noreferrer" download>Приложение Ф</a> - Списък с регионите за планиране и областите, попадащи в тях</li>
             <li><a href="/documents/cluster_development/application_h.docx" target="_blank" rel="noopener noreferrer" download>Приложение Х</a> - Използвани съкращения и основни дефиниции</li>
             </ul>
+            <h5 style="font-size: 1.1em; font-weight: 400">Документи за попълване</h5>
+
+            <ul>
+                <li><a href="/documents/maritime_affairs_and_fisheries/declaration_1.pdf" target="_blank" rel="noopener noreferrer" download>Декларация</a> за обстоятелствата по чл.3 И чл.4 от Закона за малките и средните предприятия</li>
+                <li><a href="/documents/maritime_affairs_and_fisheries/declaration_1.xls" target="_blank" rel="noopener noreferrer" download>Справка</a> за обощените параметри на предприятието</li>
+                <li><a href="/documents/maritime_affairs_and_fisheries/fill_in_instructions.doc" target="_blank" rel="noopener noreferrer" download>Указания</a> за попълване на Декларацията за обстоятелствата по чл. 3 и чл. 4</li>
+                <li><a href="/documents/maritime_affairs_and_fisheries/business_plan.xls" target="_blank" rel="noopener noreferrer" download>Бизнес план</a>&nbsp;</li>
+                <li><a href="/documents/maritime_affairs_and_fisheries/declaration_2.doc" target="_blank" rel="noopener noreferrer" download>Декларация 2</a> за запознаване с условията за финансиране</li>
+                <li><a href="/documents/maritime_affairs_and_fisheries/declaration_3.doc" target="_blank" rel="noopener noreferrer" download>Декларация 3</a> по чл.25, ал.2 от Закона за управление на средствата от Европейските структурни и инвестиционни фондове</li>
+                <li><a href="/documents/maritime_affairs_and_fisheries/declaration_4.docx" target="_blank" rel="noopener noreferrer" download>Декларация 4</a> за съгласие за предоставяне данни от НСИ</li>
+                <li><a href="/documents/maritime_affairs_and_fisheries/declaration_5.doc" target="_blank" rel="noopener noreferrer" download>Декларация 5</a> за държавни помощи</li>
+                <li><a href="/documents/maritime_affairs_and_fisheries/declaration_5-1.doc" target="_blank" rel="noopener noreferrer" download>Декларация 5-1</a> за получена държавна/минимална помощ</li>
+                <li><a href="/documents/maritime_affairs_and_fisheries/declaration_6.docx" target="_blank" rel="noopener noreferrer" download>Декларация 6</a> за наличие на административен и оперативен капацитет&nbsp;</li>
+                </ul>
     </div>
 
     <style>
             .text{
-     width: 60em;
-        background-color: rgb(60, 60, 94);
+     width: 65em;
+        background-color: rgb(56, 56, 88);
         border-radius: 1em;
         padding: 1em 2em;
      margin: 3em auto;

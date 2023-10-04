@@ -1,0 +1,1 @@
+<h1 style="text-align: center; font-size: clamp(2.6rem, 8vw, 4rem);margin-top: 5vh">Обяви</h1>
