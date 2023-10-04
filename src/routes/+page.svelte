@@ -140,6 +140,10 @@
     padding: 1em; */
     transform: scale(1.2);
     margin-bottom: 2%;
+    background-color: #1A936F !important;
+}
+.button-3:hover{
+    background-color: #178060 !important;
 }
 @media screen and (max-width: 1300px) {
     #section-1 {
