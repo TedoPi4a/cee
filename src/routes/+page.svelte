@@ -9,7 +9,7 @@
   </script>
   
 <div class="main-image" style="position: relative;">
-    <h1>
+    <h1 style="text-transform:uppercase;">
         Камара на енергийните одитори    </h1>
     
     	<a class="button-3" href="#section-1" on:click|preventDefault={scrollIntoView}>
