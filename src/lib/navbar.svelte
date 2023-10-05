@@ -284,7 +284,7 @@ hr.rounded {
 
  .logo {
     background-image: url("/cee_logo_.png") ;
-    margin-left: 1.4vw;
+    margin-left: 2vw;
     width: 6em;
     height: 100%;
     background-position: center;
