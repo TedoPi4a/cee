@@ -137,8 +137,7 @@ transition: all .1s;
 
 .is-active2{
   font-weight: 400 !important;
-  color: #1A936F !important;
-
+  color: var(--blue) !important;  
 }
 .is-active{
   background-color: #3f48b3c4 !important;
@@ -217,10 +216,11 @@ color: white !important;
     text-decoration: none;
     font-size: 1.45rem;
     font-weight: 300;
+    text-transform: uppercase;
 }
 
 .navbar a:hover {
-  color: #1A936F  
+  color: var(--blue)  
 }
 
 .sidebar {
@@ -312,7 +312,7 @@ hr.rounded {
 }
 
   /* Media query for responsive design */
-  @media screen and (min-width: 1450px) {
+  @media screen and (min-width: 1550px) {
     .ham{
       display: none;
       pointer-events: none;
@@ -321,6 +321,16 @@ hr.rounded {
     }
     
   }
+  @media screen and (max-width: 1550px) {
+
+/* Hide the links by default */
+.links {
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+}
+
+}
   @media screen and (max-width: 1000px) {
     .sidebar::-webkit-scrollbar {
     visibility: hidden;
@@ -360,16 +370,7 @@ hr.rounded {
 }
 }
 
-  @media screen and (max-width: 1450px) {
 
-    /* Hide the links by default */
-    .links {
-      display: none;
-      pointer-events: none;
-      opacity: 0;
-    }
-
-  }
 
  
 </style>

@@ -19,7 +19,8 @@
   :root {
     --teal: #3d8989;
     --white: #ffffff;
-    --nav: #fc0303;
+    --nav: #128162;
+    --blue: #0E0F19;
   }
 
   *::-webkit-scrollbar-thumb {
