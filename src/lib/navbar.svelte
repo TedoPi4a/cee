@@ -67,7 +67,7 @@ let navOpen = false
     <div class="sidebar-links">
     <a on:click={idk} class:is-active3={$page.url.pathname === "/"} href="/">Начало</a>
     <hr class="rounded">
-    <a on:click={() => isOpen = !isOpen} class:is-active3={isOpen} href="#">Кои сме ние? <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+    <a on:click={() => isOpen = !isOpen} class:is-active={isOpen} href="#">Кои сме ние? <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
       <path class="notactivesym" class:activesym = {isOpen} d="M4 17L25 39L46 17Z"  />
     </svg> </a>
     {#if isOpen}
@@ -79,7 +79,7 @@ let navOpen = false
     <hr class="rounded">
     {/if}
    
-    <a on:click={() => isOpen2 = !isOpen2} class:is-active3={isOpen2} href="#">Документи <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+    <a on:click={() => isOpen2 = !isOpen2} class:is-active={isOpen2} href="#">Документи <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
       <path class="notactivesym" class:activesym = {isOpen2} d="M4 17L25 39L46 17Z"  />
     </svg> </a>
     {#if isOpen2}
@@ -89,7 +89,7 @@ let navOpen = false
     {:else}
     <hr class="rounded">
     {/if}
-    <a on:click={() => isOpen3 = !isOpen3} class:is-active3={isOpen3} href="#">Новини и събития <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+    <a on:click={() => isOpen3 = !isOpen3} class:is-active={isOpen3} href="#">Новини и събития <svg style="width: .7em; margin: 0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
       <path class="notactivesym" class:activesym = {isOpen3} d="M4 17L25 39L46 17Z"  />
     </svg> </a>
     {#if isOpen3}
@@ -138,6 +138,10 @@ transition: all .1s;
 .is-active2{
   font-weight: 400 !important;
   color: #1A936F !important;
+
+}
+.is-active{
+  background-color: #3f48b3c4 !important;
 
 }
 
@@ -269,7 +273,7 @@ hr.rounded {
   margin: .2rem;
 }
 .sidebar a:hover{
-  background-color: rgb(36, 29, 77);
+  background-color: rgb(49, 40, 100) !important;
   color: #EDF7F6 !important;
 }
 .active {
