@@ -317,10 +317,19 @@ hr.rounded {
     
   }
   @media screen and (max-width: 1000px) {
+    .sidebar::-webkit-scrollbar {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    
+  }  
     .sidebar {
-  width: 100%;
-
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+      height: calc(100svh - 5rem) ;
   background-color: #5863F8;
+  border-radius: 1em;
 
   opacity: 0.85;
   clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
