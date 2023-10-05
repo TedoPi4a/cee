@@ -17,15 +17,15 @@
 <style>
     main{
         display: flex;
-        justify-content: space-evenly;
-        gap: 2rem;
+        justify-content: space-around;
+        gap: 4rem;
         flex-wrap: wrap;
         margin-top: 4em;
     }
     main .info {
         font-size: clamp(.8rem, 4vw, 1.2rem);
         max-width: 95%;
-
+        width: 40em;
     }
     img{
         max-width: 95%;

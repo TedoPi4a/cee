@@ -134,15 +134,13 @@ transform: scale(95%);
 transition: all .1s;
 
 }
-.is-active{
-  font-weight: 300 !important;
+
+.is-active2{
+  font-weight: 400 !important;
+  color: #1A936F !important;
 
 }
-.is-active2{
-  color: #3d8989 !important;
-  font-weight:bolder  !important;
-  font-weight: 400 !important;
-}
+
 .is-active3{
   font-weight: 400 !important;
   background-color: rgb(53, 43, 110) !important;
