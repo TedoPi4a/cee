@@ -27,7 +27,7 @@ let navOpen = false
 <main>
 <div on:mouseleave={idk} class="navbar">
 
-  <div class="logo"></div>
+ <a class="logo" href="/"></a>
   <div class="ham" on:click={() => navOpen = !navOpen}><Ham isHam={navOpen} /></div>
   <div class="links">
     <a class:is-active2={$page.url.pathname === "/"} class="link" href="/">Начало</a>
@@ -282,10 +282,10 @@ hr.rounded {
 
 }
 
-.navbar .logo {
+ .logo {
     background-image: url("/logo_cee.png") ;
-    margin-left: 2vw;
-    width: 12em;
+    margin-left: 1vw;
+    width: 10em;
     height: 100%;
     background-position: center;
     background-size: cover;
