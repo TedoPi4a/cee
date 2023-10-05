@@ -10,8 +10,7 @@
   
 <div class="main-image" style="position: relative;">
     <h1>
-        УВАЖАЕМИ ЧЛЕНОВЕ НА КАМАРА НА ЕНЕРГИЙНИТЕ ОДИТОРИ,
-    </h1>
+        Камара на енергийните одитори    </h1>
     
     	<a class="button-3" href="#section-1" on:click|preventDefault={scrollIntoView}>
             Прочети още
@@ -90,15 +89,15 @@
     text-align: center;
     margin: 0;
     max-width: 17em;
-    color: #fff;
+    color: #0c438a;
     font-size: clamp(2.4rem, 8vw, 4.5rem);     margin-bottom: .8em;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.808);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.108);
 }
 #section-1 {
     padding: 0 0 16vh 0;
     min-height: fit-content !important;
     width: 100%;
-    background-color: #171a3f;
+    /* background-color: #171a3f; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;

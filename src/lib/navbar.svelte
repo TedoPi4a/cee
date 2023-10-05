@@ -152,7 +152,7 @@ transition: all .1s;
 }
 
     .navbar {
-    background-color: #1e1b44;
+    background-color: var(--nav);
     display: flex;
     position: relative;
     /* position: fixed; */
@@ -169,8 +169,8 @@ transition: all .1s;
   top: 1;
   z-index: 1;
   transform: translateY(-1em);
-  background-color: #1e1b44;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: var(--nav);
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   line-height: 3em;
   min-width: fit-content;
   height: fit-content;

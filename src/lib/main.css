@@ -16,6 +16,12 @@
     background: #14102b;
   }
 
+  :root {
+    --teal: #3d8989;
+    --white: #ffffff;
+    --nav: #F4A261
+  }
+
   *::-webkit-scrollbar-thumb {
     background-color: #3d8989;
     border-radius: 20px;
