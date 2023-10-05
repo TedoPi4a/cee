@@ -1,7 +1,7 @@
 <script>
   import Ham from "./ham.svelte";
   import { page } from '$app/stores';
-	import { fly } from "svelte/transition";
+	import { fly, fade } from "svelte/transition";
 
 let isOpen = false;
 let isOpen2 = false;
@@ -71,10 +71,10 @@ let navOpen = false
       <path class="notactivesym" class:activesym = {isOpen} d="M4 17L25 39L46 17Z"  />
     </svg> </a>
     {#if isOpen}
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} href="/info">Информация </a>
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} class:is-active3={$page.url.pathname === "/chamber"} href="/chamber">Камара</a>
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} class:is-active3={$page.url.pathname === "/managment"} href="/managment">Ръководство</a>
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} class:is-active3={$page.url.pathname === "/members"} href="/members">Членове</a>  <hr class="rounded">
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} href="/info">Информация </a>
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} class:is-active3={$page.url.pathname === "/chamber"} href="/chamber">Камара</a>
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} class:is-active3={$page.url.pathname === "/managment"} href="/managment">Ръководство</a>
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} class:is-active3={$page.url.pathname === "/members"} href="/members">Членове</a>  <hr class="rounded">
     {:else}
     <hr class="rounded">
     {/if}
@@ -83,9 +83,9 @@ let navOpen = false
       <path class="notactivesym" class:activesym = {isOpen2} d="M4 17L25 39L46 17Z"  />
     </svg> </a>
     {#if isOpen2}
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} style="line-height: 1.4em" class:is-active3={$page.url.pathname === "/eu-documents"} href="/eu-documents">Документи на ЕС</a>  
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} style="line-height: 1.4em" class:is-active3={$page.url.pathname === "/bulgarian-documents"} href="/bulgarian-documents">Документи на РБ</a>  
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} style="line-height: 1.4em" class:is-active3={$page.url.pathname === "/cee-documents"} href="/cee-documents">Документи на камарата</a>  <hr class="rounded">
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} style="line-height: 1.4em" class:is-active3={$page.url.pathname === "/eu-documents"} href="/eu-documents">Документи на ЕС</a>  
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} style="line-height: 1.4em" class:is-active3={$page.url.pathname === "/bulgarian-documents"} href="/bulgarian-documents">Документи на РБ</a>  
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} style="line-height: 1.4em" class:is-active3={$page.url.pathname === "/cee-documents"} href="/cee-documents">Документи на камарата</a>  <hr class="rounded">
     {:else}
     <hr class="rounded">
     {/if}
@@ -93,9 +93,9 @@ let navOpen = false
       <path class="notactivesym" class:activesym = {isOpen3} d="M4 17L25 39L46 17Z"  />
     </svg> </a>
     {#if isOpen3}
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} class:is-active3={$page.url.pathname === "/news"} href="/news">Новини</a>  
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} class:is-active3={$page.url.pathname === "/upcoming-events"} href="/upcoming-events">Предстоящи събития</a> 
-    <a transition:fly={{ x: 100, duration: 200 }} on:click={idk} class:is-active3={$page.url.pathname === "/events-information"} href="/events-information">Информация за събития</a>  <hr class="rounded">
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} class:is-active3={$page.url.pathname === "/news"} href="/news">Новини</a>  
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} class:is-active3={$page.url.pathname === "/upcoming-events"} href="/upcoming-events">Предстоящи събития</a> 
+    <a in:fly={{ x: 100, duration: 200 }} out:fade={{duration: 200}} on:click={idk} class:is-active3={$page.url.pathname === "/events-information"} href="/events-information">Информация за събития</a>  <hr class="rounded">
     {:else}
     <hr class="rounded">
     {/if}
