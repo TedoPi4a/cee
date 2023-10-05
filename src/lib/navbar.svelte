@@ -283,12 +283,13 @@ hr.rounded {
 }
 
  .logo {
-    background-image: url("/logo_cee.png") ;
-    margin-left: 1vw;
-    width: 9em;
+    background-image: url("/cee_logo_.png") ;
+    margin-left: 1.4vw;
+    width: 6em;
     height: 100%;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .links{
   display: flex;
