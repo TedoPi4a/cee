@@ -27,7 +27,7 @@
 
     <style>
             embed{
-        border-radius: .75em; border: none; max-width: 99%; margin: 0 auto; display: block;
+        border-radius: .75em; border: none; max-width: 95%; margin: 0 auto; display: block;
         width: 65em; margin-bottom: 5vh;
     }
             .text{
