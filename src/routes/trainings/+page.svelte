@@ -24,6 +24,8 @@
    
     </div>
     <embed src="/documents/1-ПРЕЗЕНТАЦИЯ-МРРБ-ДТПН-28-29.11.2022-За-КЕО.pdf" type="application/pdf"  height="600em">
+    <embed src="/documents/ThingsLog_indusrty_energy_auditors.pdf" type="application/pdf"  height="600em">
+    <embed src="/documents/Примери-Изчисления-Първична-енергия-ДТПН-МРРБ (1).pdf" type="application/pdf"  height="600em">
 
     <style>
             embed{
