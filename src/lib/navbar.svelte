@@ -59,7 +59,7 @@ let navOpen = false
           <a class:is-active2={$page.url.pathname === "/events-information"} href="/events-information">Информация за събития</a>
       </div>
     </a>
-    <a class:is-active2={$page.url.pathname === "/announcements"}   href="/announcements">Обяви</a>
+    <a class:is-active2={$page.url.pathname === "/trainings"}   href="/trainings">Обучения</a>
     <a class="link" class:is-active2={$page.url.pathname === "/useful-links"} href="/useful-links">Полезни връзки</a>
     <a class="link" class:is-active2={$page.url.pathname === "/contacts"} href="/contacts">Контакти</a>
   </div>
@@ -102,7 +102,7 @@ let navOpen = false
 
 
 
-    <a on:click={idk} class:is-active3={$page.url.pathname === "/announcements"} href="/announcements">Обяви</a>  <hr class="rounded">
+    <a on:click={idk} class:is-active3={$page.url.pathname === "/trainings"} href="/trainings">Обучения</a>  <hr class="rounded">
     <a on:click={idk} class:is-active3={$page.url.pathname === "/useful-links"} href="/useful-links">Полезни връзки</a>  <hr class="rounded">
     <a on:click={idk} class:is-active3={$page.url.pathname === "/contacts"} href="/contacts">Контакти</a>  <hr class="rounded">
   </div>
@@ -140,13 +140,15 @@ transition: all .1s;
   color: var(--blue) !important;  
 }
 .is-active{
-  background-color: #3f48b3c4 !important;
+  /* background-color: #3f48b3c4 !important; */
+  background-color: #136b51 !important;
 
 }
 
 .is-active3{
   font-weight: 400 !important;
-  background-color: rgb(53, 43, 110) !important;
+  background-color: #0d4937!important;  
+ 
 
 }
 
@@ -231,9 +233,9 @@ color: white !important;
   height: calc(100vh - 5rem);
   margin-top: 5rem;
   overflow-y: auto;
-  border-radius: 1em 0 1em 1em;
+  border-radius: 0 0 1em 1em;
   position: absolute;
-  background-color: #4d59d7;
+  background-color: var(--nav);
   transition: all .5s;
 
   opacity: 0.75;
@@ -273,7 +275,8 @@ hr.rounded {
   margin: .2rem;
 }
 .sidebar a:hover{
-  background-color: rgb(49, 40, 100) !important;
+  /* background-color: rgb(49, 40, 100) !important; */
+  background-color: #178b69;
   color: #EDF7F6 !important;
 }
 .active {
@@ -343,8 +346,9 @@ hr.rounded {
   margin-left: auto;
   margin-right: auto;
       height: calc(100svh - 5rem) ;
-  background-color: #5863F8;
-  border-radius: 1em;
+  /* background-color: #5863F8; */
+  background-color: var(--nav);
+  border-radius: 0 0 1em 1em;
 
   opacity: 0.85;
   clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
@@ -358,7 +362,7 @@ hr.rounded {
   text-align: center;
 }
 .sidebar a:hover{
-  background-color: rgb(26, 21, 56);
+  /* background-color: rgb(26, 21, 56); */
 }
 .active {
   right: 0; /* Slide the sidebar into view when active */
