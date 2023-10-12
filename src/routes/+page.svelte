@@ -7,7 +7,10 @@
       });
     }
   </script>
-  
+  <svelte:head>
+    <title>Камара на енергийните одитори</title>
+    <meta name="description" content="Сайт на Камарата на енергийните одитори в България.">
+  </svelte:head>
 <div class="main-image" style="position: relative;">
     <h1 style="text-transform:uppercase;">
         Камара на енергийните одитори    </h1>
