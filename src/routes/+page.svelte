@@ -18,20 +18,20 @@
     	<a class="button-3" href="#section-1" on:click|preventDefault={scrollIntoView}>
             Прочети още
         </a>
-        <div class="custom-shape-divider-bottom-1695500359">
+        <!-- <div class="custom-shape-divider-bottom-1695500359">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
             </svg>
-        </div>
+        </div> -->
 </div>
 
 <section id="section-2" style="position: relative;">
   <!-- <img src="/banner-BEO.jpg" alt=""> <div class="banner"></div>  -->
-  <div class="custom-shape-divider-top-1695500309" >
+  <!-- <div class="custom-shape-divider-top-1695500309" >
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
         </svg>
-    </div>
+    </div> -->
   
     </section>
 <section id="section-1" style="position: relative;">
@@ -123,7 +123,7 @@
     background-image: url("/banner-BEO.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position:  0 2em;
+    background-position:  center 0; 
     padding-bottom: 12vw;
 }
 #section-2 img {
@@ -195,9 +195,9 @@
     background-image: url("/banner-BEO.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 2em;
+    background-position: center 0em;
     padding-bottom: 15vw;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 85%);
 }
 /* #section-1 {
     padding: 10vw 0;} */
