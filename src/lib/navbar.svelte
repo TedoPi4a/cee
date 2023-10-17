@@ -315,7 +315,7 @@ hr.rounded {
 }
 
   /* Media query for responsive design */
-  @media screen and (min-width: 1550px) {
+  @media screen and (min-width: 1600px) {
     .ham{
       display: none;
       pointer-events: none;
@@ -324,7 +324,7 @@ hr.rounded {
     }
     
   }
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1599px) {
 
 /* Hide the links by default */
 .links {

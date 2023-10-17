@@ -25,12 +25,21 @@
         </div>
 </div>
 
-<section id="section-1" style="position: relative; padding-top: 15vh">
-    <div class="custom-shape-divider-top-1695500309">
+<section id="section-2" style="position: relative;">
+  <!-- <img src="/banner-BEO.jpg" alt=""> <div class="banner"></div>  -->
+  <div class="custom-shape-divider-top-1695500309" >
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
         </svg>
     </div>
+  
+    </section>
+<section id="section-1" style="position: relative;">
+    <!-- <div class="custom-shape-divider-top-1695500309">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+        </svg>
+    </div> -->
     <h2>
         С настоящата покана, Управителният съвет на КАМАРА НА ЕНЕРГИЙНИТЕ ОДИТОРИ /КЕО/ - гр. София на основание чл.26, ал.1 и ал.2 ЗЮЛНЦ във вр.чл.24, ал.2 във вр.чл.25, ал.1 и ал.2 от Устава на сдружението, свиква Общо събрание на КЕО, което ще се проведе на 10.11.2021 г. /сряда/ от 11.00 ч. на адрес: гр. София, ул. Раковски №108, Дом на науката и техниката /ФНТС/, етаж 2, зала № 2 „Проф. Иван Попов“  <br> <br> Поканата и дневния ред на заседанието можете да намерите в прикачения файл.
 
@@ -97,7 +106,7 @@
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.108);
 }
 #section-1 {
-    padding: 0 0 16vh 0;
+    padding: 5vw 0;
     min-height: fit-content !important;
     width: 100%;
     /* background-color: #171a3f; */
@@ -107,6 +116,26 @@
     gap: 1rem;
     flex-direction: row;
     align-content: flex-start;
+}
+#section-2 {
+    width: 100%;
+    height: 20vw;
+    background-image: url("/banner-BEO.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:  0 2em;
+    padding-bottom: 12vw;
+}
+#section-2 img {
+    width: 100%;
+    margin-top: 2.2em;
+}
+.banner{
+
+    visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        display: none;
 }
 #section-1 a{
     color: #fff;
@@ -159,6 +188,33 @@
     margin: 0;
     }
 }
+@media screen and (max-width: 930px) {
+    #section-2 {
+    width: 100%;
+    height: 60vw;
+    background-image: url("/banner-BEO.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 2em;
+    padding-bottom: 15vw;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 90%);
+}
+/* #section-1 {
+    padding: 10vw 0;} */
+    /* .banner{
+        margin: auto;
+    height: 100vw;
+    background-image: url("/banner-BEO.jpg");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center 2.2em;
+    visibility:visible;
+        opacity: 1;
+        pointer-events: all;
+        display: block;
+    } */
+}
+
 @media screen and (max-width: 330px) {
     .downimage{
     transform: scale(1.5);
