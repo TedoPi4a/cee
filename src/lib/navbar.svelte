@@ -237,7 +237,7 @@ color: white !important;
   position: absolute;
   background-color: var(--nav);
   transition: all .5s;
-
+  overflow-x: hidden;
   opacity: 0.75;
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 
