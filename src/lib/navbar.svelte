@@ -59,7 +59,7 @@ let navOpen = false
           <a class:is-active2={$page.url.pathname === "/events-information"} href="/events-information">Информация за събития</a>
       </div>
     </a>
-    <a class:is-active2={$page.url.pathname === "/trainings"}   href="/trainings">Обучения</a>
+    <a class="link" class:is-active2={$page.url.pathname === "/trainings"}   href="/trainings">Обучения</a>
     <a class="link" class:is-active2={$page.url.pathname === "/useful-links"} href="/useful-links">Полезни връзки</a>
     <a class="link" class:is-active2={$page.url.pathname === "/contacts"} href="/contacts">Контакти</a>
   </div>
